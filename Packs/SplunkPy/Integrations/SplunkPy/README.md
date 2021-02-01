@@ -89,8 +89,9 @@ where the **$IDENTITY_VALUE** is replaced with the **user** & **src_user** from 
 #### How to configure
 1. Configure the integration to fetch incidents.
 2. Go to the `Enrichment Types` parameter and select the enrichment types you want to enrich each fetched notable. If none are selected, the integration will fetch notables as usual (without enrichment).
-3. Yoy can go to the `Enrichment Timeout (Minutes)` parameter and select the timeout for each enrichment (default to 5min). When the selected timeout was reached, notable events that were not enriched will be saved without the enrichment.
-4. You can go to the `Number of Events Per Enrichment Type` parameter and select the maximal amount of events to fetch per enrichment type (default to 20).
+3. You can go to the `Fetch notable events ES enrichment query` parameter and select the query to fetch the notables from Splunk. Make sure to provide a query with uses the \`notable\` macro, See the default query as an example.
+4. You can go to the `Enrichment Timeout (Minutes)` parameter and select the timeout for each enrichment (default to 5min). When the selected timeout was reached, notable events that were not enriched will be saved without the enrichment.
+5. You can go to the `Number of Events Per Enrichment Type` parameter and select the maximal amount of events to fetch per enrichment type (default to 20).
 
 #### Knowing the status of an enrichment
 Each enriched incident **can** containt the following fields in the incident context:
